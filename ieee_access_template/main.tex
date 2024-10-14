@@ -1,0 +1,185 @@
+% Uncomment the following line if the paper is going to be published in journal
+
+%\documentclass[journal, twoside]{IEEEtran}
+
+% Uncomment the following line if the paper is going to be published on the conference
+
+\documentclass{ieeeaccess}
+
+% Warning: different journals/conferences migh have different requirements for the papers this is just a default template
+
+%*********************************************************************************************************************************
+
+% Importing packages -  beginning
+
+\IEEEoverridecommandlockouts
+\usepackage{cite}
+\usepackage{amssymb,amsfonts}
+\usepackage{amsmath}
+\interdisplaylinepenalty=2500
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+		T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+
+\makeatletter
+\def\endthebibliography{
+	\def\@noitemerr{\@latex@warning{Empty `thebibliography' environment}}
+	\endlist
+}
+\makeatother
+
+\renewcommand{\encodingdefault}{OT1}
+\usepackage[utf8]{luainputenc}
+
+\usepackage[withpage, nohyperlinks]{acronym}
+
+\usepackage[spaces,hyphens]{xurl}
+\usepackage[colorlinks,allcolors=blue]{hyperref}
+\usepackage{caption}
+\usepackage{glossaries-extra}
+\usepackage{subfigure}
+
+% Importing packages - end
+
+%*********************************************************************************************************************************
+
+
+\begin{document}
+	\urlstyle{tt}
+	
+	\history{Date of publication xxxx 00, 0000, date of current version xxxx 00, 0000.}
+	
+	\doi{10.1109/ACCESS.2017.DOI}
+	
+	\title{Template for IEEE Acess Papers}
+	
+
+	\input{./headers/authors.tex}
+	
+	\tfootnote{This paragraph of the first footnote will contain support 
+		information, including sponsor and financial support acknowledgment. For 
+		example, ``This work was supported in part by the U.S. Department of 
+		Commerce under Grant BS123456.''}
+	
+	\markboth
+	{Author \headeretal: Template for IEEE Acess Papers}
+	{Author \headeretal: Template for IEEE Acess Papers}
+	
+	\corresp{Corresponding author: Batman (e-mail: batman@fri.uniza.sk).}
+	
+	\input{./headers/abstract_keywords.tex}
+	
+	\titlepgskip=-15pt
+
+	\maketitle	
+	
+	%Glossary
+	\input{./headers/acronyms.tex}
+		
+	
+	\input{./sections/introduction.tex}
+	
+	% Add here the sections of your conference paper - beginning
+	
+	\input{./sections/my_only_section.tex}
+	
+	
+	% Add here the sections of your conference paper - end
+	
+	
+	\input{./sections/conclusion.tex}
+	
+	
+	
+	\input{./headers/declaration_of_competing_interests.tex}
+	
+	\input{./headers/data_availability.tex}
+	
+	\input{./headers/acknowledgments.tex}
+	
+	
+	
+	% If you are using TexStudiu you have to choose Tools → Commands → Bibtex and then recompile to sort the references based on their order of citations in the document.
+	% You can also add shortcut for Bibtex to the upper menu. Based on pictures from the folder bibliography_recompilation_guide. 
+	
+	% If you are using Overleaf then it will automatically sort the references for you.
+	\nocite{*}
+	\bibliographystyle{IEEEtran}
+	\bibliography{IEEEabrv,./bibliography/figure_sources.bib,./bibliography/text_sources.bib}
+	
+	\input{./headers/biography.tex}
+	
+	\EOD
+	
+\end{document}
+
+\begin{comment}
+	
+% If you don't know what to put to certain fields don't erase them just leave them empty they will be automatically ignored when the references are generated.
+
+% Template for articles in biblography
+
+@article{,
+	title        = {},
+	author       = {},
+	year         = {},
+	month        = {},
+	journal      = {},
+	booktitle    = {},
+	volume       = {},
+	number       = {},
+	pages        = {},
+	doi          = {},
+	issn         = {},
+	url          = {},
+}
+
+% Example usage 
+
+@article{vibrations,
+	title        = {A study of low level vibrations as a power source for wireless sensor nodes},
+	author       = {Shad Roundy and Paul K. Wright and Jan Rabaey},
+	year         = {2003},
+	month        = {July},
+	journal      = {Computer Communications},
+	booktitle    = {},
+	volume       = {26},
+	number       = {11},
+	pages        = {1131--1144},
+	doi          = {https://doi.org/10.1016/S0140-3664(02)00248-7},
+	issn         = {0140-3664},
+	url          = {https://www.sciencedirect.com/science/article/pii/S0140366402002487},
+}
+
+% Template for Figures in biblography
+
+% Template for Figures in biblography
+
+@online{,
+	title        = {},
+	author       = {},
+	year         = {},
+	month		 = {},
+	publisher 	 = {},
+	urldate   	 = {},
+	url          = {},
+}
+
+
+% Example usage
+
+@online{vibrations,
+	title        = {Introduction to Vibration Energy Harvesting},
+	author       = {Francesco Orfei},
+	year         = {2019},
+	month		 = {June},
+	publisher 	 = {allaboutcircuits},
+	urldate   	 = {10.9.2023},
+	url          = {https://www.allaboutcircuits.com/technical-articles/introduction-to-vibration-energy-harvesting/},
+}
+
+\end{comment}
